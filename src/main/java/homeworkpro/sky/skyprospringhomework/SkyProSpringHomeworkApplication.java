@@ -8,6 +8,7 @@ public class SkyProSpringHomeworkApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SkyProSpringHomeworkApplication.class, args);
+
 	}
 
 }
