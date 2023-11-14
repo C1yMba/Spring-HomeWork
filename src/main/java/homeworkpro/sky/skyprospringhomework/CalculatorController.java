@@ -16,13 +16,13 @@ public class CalculatorController {
 
     @GetMapping
     public String calculatorGreetings() {
-        return calculator.calculatorGreetings();
+        return calculator.calculatorHello();
     }
 
     @GetMapping(path = "/plus")
     public String sumNumbers(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return ("Ошибка, не задан один или несколько параметров");
+            return ("Ошибка, не задан один или несколько параметров!");
         }
         return num1 + " + " + num2 + " = " + calculator.sumNumbers(num1, num2);
     }
@@ -30,7 +30,7 @@ public class CalculatorController {
     @GetMapping(path = "/minus")
     public String minusNumbers(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return ("Ошибка, не задан один или несколько параметров");
+            return ("Ошибка, не задан один или несколько параметров!");
         }
         return num1 + " - " + num2 + " = " + calculator.minusNumbers(num1, num2);
     }
@@ -38,7 +38,7 @@ public class CalculatorController {
     @GetMapping(path = "/multiply")
     public String multiplyNumbers(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return ("Ошибка, не задан один или несколько параметров");
+            return ("Ошибка, не задан один или несколько параметров!");
         }
         return num1 + " * " + num2 + " = " + calculator.multiplyNumbers(num1, num2);
     }
@@ -46,7 +46,7 @@ public class CalculatorController {
     @GetMapping(path = "/divide")
     public String divideNumbers(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
-            return ("Ошибка, не задан один или несколько параметров");
+            return ("Ошибка, не задан один или несколько параметров!");
         }
         try {
             return num1 + " / " + num2 + " = " + calculator.divideNumbers(num1, num2);
